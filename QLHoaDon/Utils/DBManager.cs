@@ -11,7 +11,7 @@ namespace InvoiceManager
     class DBManager
     {
         private static DBManager instance;
-        private string connectionString = @"Data Source=.\SQLExpress;Initial Catalog=InvoiceManager;Integrated Security=True";
+        private string connectionString = @"Data Source=.\SQLExpress;Initial Catalog=QLHoaDon;Integrated Security=True";
 
         public static DBManager shared()
         {

@@ -1,7 +1,7 @@
-create database InvoiceManager;
+create database QLHoaDon;
 go
 
-use InvoiceManager;
+use QLHoaDon;
 go
 
 create table users(
