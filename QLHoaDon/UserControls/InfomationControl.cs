@@ -68,7 +68,8 @@ namespace InvoiceManager
             if (DBManager.shared().ExecuteNonQuery(query) > 0)
             {
                 MessageBox.Show("Cập nhật thành công");
-            } else
+            }
+            else
             {
                 MessageBox.Show("Cập nhật thất bại");
             }
