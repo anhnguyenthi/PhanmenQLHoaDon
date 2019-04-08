@@ -113,7 +113,7 @@ namespace InvoiceManager.UserControls
             if (dataGridViewInvoices.CurrentCell != null)
             {
                 string id = dataGridViewInvoices.Rows[dataGridViewInvoices.CurrentCell.RowIndex].Cells[0].Value.ToString();
-                if (MessageBox.Show("Bạn có chắc muốn xóa hóa đơn", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa hóa đơn???", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     string query = string.Format("DELETE FROM DETAILS WHERE INVOICE_ID={0};DELETE FROM INVOICES WHERE ID={1}", id, id);
                     DBManager.shared().ExecuteNonQuery(query);
@@ -298,6 +298,11 @@ namespace InvoiceManager.UserControls
             txtAmountTotal.Text = "0";
             txtID.Text = "";
             panelDetail.Enabled = isEnable;
+        }
+
+        private void txtCustomerName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

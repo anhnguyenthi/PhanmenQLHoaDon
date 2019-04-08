@@ -35,6 +35,7 @@
             this.btnEditInvoice = new System.Windows.Forms.Button();
             this.btnDeleteInvoice = new System.Windows.Forms.Button();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnLock = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.btnAddDetail = new System.Windows.Forms.Button();
             this.lblAmountTotal = new System.Windows.Forms.Label();
             this.dataGridViewDetails = new System.Windows.Forms.DataGridView();
-            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoices)).BeginInit();
             this.panelDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDetails)).BeginInit();
@@ -130,6 +130,14 @@
             this.panelDetail.Size = new System.Drawing.Size(440, 390);
             this.panelDetail.TabIndex = 6;
             // 
+            // txtID
+            // 
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(357, 11);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(75, 20);
+            this.txtID.TabIndex = 26;
+            // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(357, 205);
@@ -181,6 +189,7 @@
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(236, 20);
             this.txtCustomerName.TabIndex = 6;
+            this.txtCustomerName.TextChanged += new System.EventHandler(this.txtCustomerName_TextChanged);
             // 
             // txtAmountTotal
             // 
@@ -230,14 +239,6 @@
             this.dataGridViewDetails.ReadOnly = true;
             this.dataGridViewDetails.Size = new System.Drawing.Size(339, 309);
             this.dataGridViewDetails.TabIndex = 16;
-            // 
-            // txtID
-            // 
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(357, 11);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(75, 20);
-            this.txtID.TabIndex = 26;
             // 
             // InvoiceControl
             // 
