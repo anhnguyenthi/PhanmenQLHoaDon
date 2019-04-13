@@ -31,7 +31,7 @@ namespace InvoiceManager
             }
             else
             {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng.");
+                MessageBox.Show("Tài khoản hoặc mật khẩu của bạn không đúng. Hãy nhập lại.");
             }
         }
 
