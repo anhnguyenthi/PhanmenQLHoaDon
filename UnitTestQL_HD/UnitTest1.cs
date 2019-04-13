@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Unittest_QLHoaDon
+namespace UnitTestQL_HD
 {
     [TestClass]
     public class UnitTest1

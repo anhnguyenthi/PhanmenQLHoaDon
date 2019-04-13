@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLHoaDon", "QLHoaDon\QLHoaDon.csproj", "{868E9FCF-95FA-423F-A954-A7C69794EEBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unittest_QLHoaDon", "Unittest_HoaDon\Unittest_QLHoaDon.csproj", "{3E50B00D-D986-4ECD-A98D-3ADD81A29CA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestQL_HD", "UnitTestQL_HD\UnitTestQL_HD.csproj", "{38ECD58F-3F78-41DD-9751-FE416858693D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{868E9FCF-95FA-423F-A954-A7C69794EEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{868E9FCF-95FA-423F-A954-A7C69794EEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{868E9FCF-95FA-423F-A954-A7C69794EEBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3E50B00D-D986-4ECD-A98D-3ADD81A29CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E50B00D-D986-4ECD-A98D-3ADD81A29CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3E50B00D-D986-4ECD-A98D-3ADD81A29CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3E50B00D-D986-4ECD-A98D-3ADD81A29CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38ECD58F-3F78-41DD-9751-FE416858693D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38ECD58F-3F78-41DD-9751-FE416858693D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38ECD58F-3F78-41DD-9751-FE416858693D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38ECD58F-3F78-41DD-9751-FE416858693D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
