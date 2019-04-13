@@ -23,7 +23,7 @@ namespace InvoiceManager
         {
             if (doLogin(txtUserName.Text, txtPassword.Text))
             {
-                username = txtUserName.Text;
+                
                 this.Hide();
                 var invoiceManagerForm = new InvoiceManager();
                 invoiceManagerForm.setLoginForm(this);
