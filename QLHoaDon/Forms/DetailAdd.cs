@@ -47,7 +47,7 @@ namespace InvoiceManager.Forms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            
+            DialogResult = DialogResult.Cancel;
         }
 
         public decimal getAmount()
