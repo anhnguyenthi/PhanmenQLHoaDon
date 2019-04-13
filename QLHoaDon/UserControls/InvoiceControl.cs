@@ -105,7 +105,7 @@ namespace InvoiceManager.UserControls
 
         private void dataGridViewInvoices_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            loadTextDetail();
         }
 
         private void btnDeleteInvoice_Click(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace InvoiceManager.UserControls
         {
             if (dataGridViewInvoices.CurrentCell != null)
             {
-                if (MessageBox.Show("Bạn có chắc muốn khóa hóa đơn", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                if (MessageBox.Show("Bạn có chắc muốn khóa hóa đơn???", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     string query = string.Format("UPDATE INVOICES SET STATUS='TRUE' WHERE ID='{0}'", dataGridViewInvoices.Rows[dataGridViewInvoices.CurrentCell.RowIndex].Cells[0]);
                     if (DBManager.shared().ExecuteNonQuery(query) > 0)
@@ -148,7 +148,7 @@ namespace InvoiceManager.UserControls
         {
             if (dataGridViewDetails.CurrentCell != null)
             {
-                if (MessageBox.Show("Bạn có chắc muốn xóa sản phẩm", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                if (MessageBox.Show("Bạn có chắc muốn xóa sản phẩm???", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     Console.Write(dataDetails.Rows[dataGridViewDetails.CurrentCell.RowIndex]["ID"]);
                     if (!dataDetails.Rows[dataGridViewDetails.CurrentCell.RowIndex]["ID"].ToString().Equals(""))
