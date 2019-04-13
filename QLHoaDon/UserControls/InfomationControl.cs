@@ -19,7 +19,7 @@ namespace InvoiceManager
 
         private void InfomationControl_Load(object sender, EventArgs e)
         {
-            loadInfo();
+            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
