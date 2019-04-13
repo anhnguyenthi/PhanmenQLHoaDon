@@ -169,10 +169,10 @@ namespace InvoiceManager.UserControls
         {
             if (txtCustomerName.TextLength == 0)
             {
-                MessageBox.Show("Chưa nhập tên khách hàng");
+                MessageBox.Show("Chưa nhập tên khách hàng. hãy nhập tên khách hàng");
             } else if (dataGridViewDetails.RowCount == 0 && queryDetails.Equals(""))
             {
-                MessageBox.Show("Chưa nhập sản phẩm");
+                MessageBox.Show("Chưa nhập sản phẩm, hãy nhập tên sản phẩm");
             } else
             {
                 getQuery();
