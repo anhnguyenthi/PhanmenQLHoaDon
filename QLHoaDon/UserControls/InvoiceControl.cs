@@ -24,8 +24,7 @@ namespace InvoiceManager.UserControls
         {
             if (dataGridViewInvoices.RowCount != 0 && dataGridViewInvoices.CurrentCell.Selected)
             {
-                panelDetail.Enabled = true;
-                loadTextDetail();
+                
 
             } else
             {

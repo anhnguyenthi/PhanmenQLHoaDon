@@ -32,7 +32,7 @@ namespace InvoiceManager.UserControls
                     string query = string.Format("INSERT INTO ITEMS(NAME, PRICE) VALUES(N'{0}', {1})", txtName.Text, txtPrice.Text);
                     if (DBManager.shared().ExecuteNonQuery(query) > 0)
                     {
-                        MessageBox.Show("Thêm mới thành công");
+                        MessageBox.Show("Bạn đã thêm mới thành công");
                     }
                 }
                 else
@@ -73,7 +73,7 @@ namespace InvoiceManager.UserControls
 
         private void ProductControl_Load(object sender, EventArgs e)
         {
-            
+            loadDataGrid();
         }
 
         private void loadDataGrid()
