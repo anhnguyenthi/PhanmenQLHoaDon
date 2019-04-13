@@ -210,12 +210,12 @@ namespace InvoiceManager.UserControls
 
         private void loadTextDetail()
         {
-            //int indexRow = dataGridViewInvoices.CurrentCell.RowIndex;
-            //txtID.Text = dataGridViewInvoices.Rows[indexRow].Cells[0].Value.ToString();
-            //txtCustomerName.Text = dataGridViewInvoices.Rows[indexRow].Cells[2].Value.ToString();
-            //txtCustomerPhone.Text = dataGridViewInvoices.Rows[indexRow].Cells[3].Value.ToString();
-            //txtAmountTotal.Text = dataGridViewInvoices.Rows[indexRow].Cells[4].Value.ToString();
-            //loadDataDetail(txtID.Text);
+            int indexRow = dataGridViewInvoices.CurrentCell.RowIndex;
+            txtID.Text = dataGridViewInvoices.Rows[indexRow].Cells[0].Value.ToString();
+            txtCustomerName.Text = dataGridViewInvoices.Rows[indexRow].Cells[2].Value.ToString();
+            txtCustomerPhone.Text = dataGridViewInvoices.Rows[indexRow].Cells[3].Value.ToString();
+            txtAmountTotal.Text = dataGridViewInvoices.Rows[indexRow].Cells[4].Value.ToString();
+            loadDataDetail(txtID.Text);
         }
 
         private Dictionary<string, object> checkExistInColumn(DataTable dataTable, string rowName, string value)

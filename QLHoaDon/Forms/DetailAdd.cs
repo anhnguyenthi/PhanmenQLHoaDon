@@ -21,7 +21,7 @@ namespace InvoiceManager.Forms
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
+            
         }
 
         private void DetailAdd_Load(object sender, EventArgs e)
