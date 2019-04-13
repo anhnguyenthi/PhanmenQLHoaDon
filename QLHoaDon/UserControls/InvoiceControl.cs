@@ -178,13 +178,13 @@ namespace InvoiceManager.UserControls
                 getQuery();
                 if (txtID.Text.Equals(""))
                 {
-                    //Random random = new Random();
-                    //string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-                    //StringBuilder temp = new StringBuilder(20);
-                    //for (int i = 0; i < 20; i++)
-                    //{
-                    //    temp.Append(characters[random.Next(characters.Length)]);
-                    //}
+                    Random random = new Random();
+                    string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+                    StringBuilder temp = new StringBuilder(20);
+                    for (int i = 0; i < 20; i++)
+                    {
+                        temp.Append(characters[random.Next(characters.Length)]);
+                    }
                     string query = string.Format("INSERT INTO INVOICES(DATE_VALUE, PRICE, CUSTOMER_NAME, CUSTOMER_PHONE, TEMP) VALUES('{0}', {1}, '{2}', '{3}', '{4}')", DateTime.Now.ToString("yyyy-MM-dd"), txtAmountTotal.Text, txtCustomerName.Text, txtCustomerPhone.Text, temp);
                     DBManager.shared().ExecuteNonQuery(query);
                     DBManager.shared().ExecuteNonQuery(queryDetails);
