@@ -105,7 +105,7 @@
             this.btnInvoice.Name = "btnInvoice";
             this.btnInvoice.Size = new System.Drawing.Size(80, 50);
             this.btnInvoice.TabIndex = 8;
-            this.btnInvoice.Text = "Hóa đơn";
+            this.btnInvoice.Text = "Hóa Đơn";
             this.btnInvoice.UseVisualStyleBackColor = true;
             this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
             // 
@@ -117,7 +117,7 @@
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(80, 50);
             this.btnEmployee.TabIndex = 7;
-            this.btnEmployee.Text = "Nhân viên";
+            this.btnEmployee.Text = "Nhân Viên";
             this.btnEmployee.UseVisualStyleBackColor = true;
             this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
