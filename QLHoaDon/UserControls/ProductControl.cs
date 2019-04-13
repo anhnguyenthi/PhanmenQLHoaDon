@@ -73,7 +73,7 @@ namespace InvoiceManager.UserControls
 
         private void ProductControl_Load(object sender, EventArgs e)
         {
-            loadDataGrid();
+            
         }
 
         private void loadDataGrid()

@@ -37,7 +37,8 @@ namespace InvoiceManager.UserControls
 
         private void loadDataInvoices()
         {
-            
+            string query = string.Format("SELECT ID, DATE_VALUE as [Ngày], CUSTOMER_NAME as [Tên khách hàng], CUSTOMER_PHONE as [Số điện thoại], PRICE as [Tổng], STATUS as [Khóa] FROM INVOICES");
+            dataGridViewInvoices.DataSource = DBManager.shared().ExecuteQuery(query);
         }
 
         private void loadDataDetail(string id)
