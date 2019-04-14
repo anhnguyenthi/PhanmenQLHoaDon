@@ -60,6 +60,7 @@
       <DependentUpon>DetailAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Kiemtradangnhap.cs" />
+    <Compile Include="KiemtraPW.cs" />
     <Compile Include="UserControls\EmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
