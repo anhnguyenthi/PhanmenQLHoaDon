@@ -59,6 +59,7 @@
     <Compile Include="Forms\DetailAdd.Designer.cs">
       <DependentUpon>DetailAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kiemtradangnhap.cs" />
     <Compile Include="UserControls\EmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

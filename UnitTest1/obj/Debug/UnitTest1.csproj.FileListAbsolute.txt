@@ -1,0 +1,9 @@
+C:\Users\Anh\Desktop\PhanmenQLHoaDon\UnitTest1\bin\Debug\UnitTest1.dll
+C:\Users\Anh\Desktop\PhanmenQLHoaDon\UnitTest1\bin\Debug\UnitTest1.pdb
+C:\Users\Anh\Desktop\PhanmenQLHoaDon\UnitTest1\bin\Debug\InvoiceManager.exe
+C:\Users\Anh\Desktop\PhanmenQLHoaDon\UnitTest1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Anh\Desktop\PhanmenQLHoaDon\UnitTest1\bin\Debug\InvoiceManager.pdb
+C:\Users\Anh\Desktop\PhanmenQLHoaDon\UnitTest1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Anh\Desktop\PhanmenQLHoaDon\UnitTest1\obj\Debug\UnitTest1.csprojResolveAssemblyReference.cache
+C:\Users\Anh\Desktop\PhanmenQLHoaDon\UnitTest1\obj\Debug\UnitTest1.dll
+C:\Users\Anh\Desktop\PhanmenQLHoaDon\UnitTest1\obj\Debug\UnitTest1.pdb
