@@ -18,7 +18,6 @@ namespace InvoiceManager
                 else if (oldpass != mainPass) { return "Nhập sai mật khẩu cũ"; }
             return "Đổi mật khẩu thành công";
             }
-        
     }
 
 }

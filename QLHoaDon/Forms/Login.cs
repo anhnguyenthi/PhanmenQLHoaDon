@@ -35,12 +35,13 @@ namespace InvoiceManager
             }
         }
 
-        bool doLogin(string username, string password)
+        public bool doLogin(string username, string password)
         {
             string query = string.Format("SELECT * FROM USERS WHERE USERNAME='{0}' AND PASSWORD='{1}' AND IS_BLOCK='False'", username, password);
             if (DBManager.shared().ExecuteScalar(query) == null)
             {
-                return false;
+                return false;//login đc là trả vè false pkú để 
+
             }
             return true;
         }

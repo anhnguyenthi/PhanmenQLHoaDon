@@ -5,38 +5,44 @@ using InvoiceManager;
 
 namespace UnitTest1
 {
+    
     //Chinh sua mot vai thong tin o day 
     [TestClass]
-    public class test_dangnhap
+    public class test_dangnhap:Login
     {
+        Login lg = new Login();
         [TestMethod]
-        public void Nhapdungtaikhoan()
-        {
-            string actual = Kiemtradangnhap.kt("admin", "123456");
-            string expected = "0";
-            Assert.AreEqual(expected, actual);
+        public void Nhapdungtaikhoan1()
+        {////Pass nếu dăng nhap dc
+            bool actual = lg.doLogin("admin", "123");
+          
+            Assert.IsTrue( actual);
 
         }
+
         [TestMethod]
-        public void Nhapthieu_mavapw()
+        public void Nhapthieu_mavapw()     
         {
-            string actual = Kiemtradangnhap.kt("", "");
-            string expected = "1";
-            Assert.AreEqual(expected, actual);
+            //Pass nếu ko dăng nhap dc
+            bool actual = lg.doLogin("", "");
+
+            Assert.IsFalse(actual);
         }
         [TestMethod]
         public void Nhapthieu_ma()
         {
-            string actual = Kiemtradangnhap.kt("", "123456");
-            string expected = "2";
-            Assert.AreEqual(expected, actual);
+            //Pass nếu ko dăng nhap dc
+            bool actual = lg.doLogin("", "123");
+
+            Assert.IsFalse(actual);
         }
         [TestMethod]
         public void Nhapthieu_pw()
         {
-            string actual = Kiemtradangnhap.kt("Ánh Nguyễn ", "");
-            string expected = "3";
-            Assert.AreEqual(expected, actual);
+            //Pass nếu ko dăng nhap dc
+            bool actual = lg.doLogin("admin", "");
+
+            Assert.IsFalse(actual);
         }
     }
     [TestClass]
