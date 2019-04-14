@@ -57,22 +57,22 @@ namespace UnitTest1
             string expected = "Nhập sai mật khẩu cũ";
             Assert.AreEqual(expected, actual);
         }
-        ////[TestMethod]
-        ////public void Test_Nhap_MK_Moi_Ngan()
-        ////{
+        [TestMethod]
+        public void Test_Nhap_MK_Moi_Ngan()
+        {
 
-        ////    string actual = KiemtraPW.check_changepassword("123456", "1", "1", "123456");
-        ////    string expected = "Mật khẩu mới quá ngắn";
-        ////    Assert.AreEqual(expected, actual);
-        ////}
-        ////[TestMethod]
-        ////public void Test_Nhap_MK_Moi_Dai()
-        ////{
+            string actual = KiemtraPW.check_changepassword("123456", "1", "1", "123456");
+            string expected = "Mật khẩu mới quá ngắn";
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Test_Nhap_MK_Moi_Dai()
+        {
 
-        ////    string actual = KiemtraPW.check_changepassword("123456", "123456789123456789123456789123456789", "123456789123456789123456789123456789", "123456");
-        ////    string expected = "Mật khẩu mới quá dài";
-        ////    Assert.AreEqual(expected, actual);
-        ////}
+            string actual = KiemtraPW.check_changepassword("123456", "123456789123456789123456789123456789", "123456789123456789123456789123456789", "123456");
+            string expected = "Mật khẩu mới quá dài";
+            Assert.AreEqual(expected, actual);
+        }
         [TestMethod]
         public void Test_Nhap_MK_Moi_Khong_Trung()
         {
@@ -98,9 +98,7 @@ namespace UnitTest1
             string expected = "Xác nhận mật khẩu không đúng";
             Assert.AreEqual(expected, actual);
         }
-
-
+    
+        }
 
     }
-
-}
