@@ -111,8 +111,17 @@ namespace UnitTest1
 
             Assert.AreEqual(expected, actual);
         }
+        //Thêm mới
+        [TestMethod]
+        public void ktranv_detrongtennv()
+        {
+            string expected = ktrnhanvien.ktra("admin", "", "371 Nguyễn Kiệm ", "0123833999");
+            string actual = "Không được để trống tên nhân viên";
 
-       
+            Assert.AreEqual(expected, actual);
+        }
+
+
     }
 }
 
