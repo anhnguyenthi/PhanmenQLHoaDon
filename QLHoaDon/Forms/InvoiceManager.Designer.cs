@@ -101,7 +101,7 @@
             // btnInvoice
             // 
             this.btnInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInvoice.Location = new System.Drawing.Point(20, 271);
+            this.btnInvoice.Location = new System.Drawing.Point(20, 198);
             this.btnInvoice.Name = "btnInvoice";
             this.btnInvoice.Size = new System.Drawing.Size(80, 50);
             this.btnInvoice.TabIndex = 8;
@@ -113,7 +113,7 @@
             // 
             this.btnEmployee.Enabled = false;
             this.btnEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployee.Location = new System.Drawing.Point(20, 193);
+            this.btnEmployee.Location = new System.Drawing.Point(20, 279);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(80, 50);
             this.btnEmployee.TabIndex = 7;
