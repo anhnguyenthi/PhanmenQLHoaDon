@@ -164,6 +164,13 @@ namespace UnitTest1
             string expected = "0";
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Them_thieu_SDT_quadai()
+        {
+            string actual = ThemNV.themNV("Anh", "12345678901234", "Huỳnh Đình Hai");
+            string expected = "0";
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
