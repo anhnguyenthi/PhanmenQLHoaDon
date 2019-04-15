@@ -19,10 +19,18 @@ namespace InvoiceManager
             else if (sdt.Length > 11)
             { return "Số điện thoại quá dài"; }
 
-            //else if (ten = " " )
-            //{
-            //    return "Vui lòng điền đầy đủ thông tin";
-            //}
+            else if (ten == "" )
+            {
+                return "Vui lòng điền đầy đủ thông tin";
+            }
+            else if (sdt == "")
+            {
+                return "Vui lòng điền đầy đủ thông tin";
+            }
+            else if (dc == "")
+            {
+                return "Vui lòng điền đầy đủ thông tin";
+            }
             return "0";
             }
         

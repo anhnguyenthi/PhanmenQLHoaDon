@@ -149,7 +149,14 @@ namespace UnitTest1
             string expected = "0";
             Assert.AreEqual(expected, actual);
         }
-
+        //Thiếu sđt nhân viên
+        [TestMethod]
+        public void Them_thieu_SDT_nhanvien()
+        {
+            string actual = ThemNV.themNV("Anh","", "Huỳnh Đình Hai");
+            string expected = "0";
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
