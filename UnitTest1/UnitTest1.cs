@@ -180,21 +180,37 @@ namespace UnitTest1
             Assert.AreEqual(expected, actual);
         }
     }
+    //[TestClass]
+    //public class SanPham
+    //{
+    //    [TestMethod]
+    //    public void XoaSP_thanhcong()
+    //    {
+    //        string expected = XoaSP.checkXoa("vật tư");
+    //        string actual = "0";
+
+    //        Assert.AreEqual(expected, actual);
+    //    }
+
+    //}
     [TestClass]
     public class SanPham
     {
         [TestMethod]
-        public void XoaSP_thanhcong()
+        public void TimThanhCong()
         {
-            string expected = XoaSP.checkXoa("vật tư");
-            string actual = "0";
-
+            string actual = TimSP.checkTim("ABC");
+            string expected = "0";
             Assert.AreEqual(expected, actual);
         }
 
-    }
+
+
 
     }
+}
+
+
 
 
    
