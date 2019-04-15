@@ -171,6 +171,15 @@ namespace UnitTest1
             string expected = "0";
             Assert.AreEqual(expected, actual);
         }
+        //Trường hợp này code sai
+        [TestMethod]
+        public void Them_thieu_SDT_quangan()
+        {
+            string actual = ThemNV.themNV("Anh", "12345", "Huỳnh Đình Hai");
+            string expected = "0";
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }
