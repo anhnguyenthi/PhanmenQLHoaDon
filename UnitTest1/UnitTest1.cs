@@ -164,6 +164,15 @@ namespace UnitTest1
             string expected = "0";
             Assert.AreEqual(expected, actual);
         }
+        //Thêm nhân viên trường hợp tên NV bỏ trống
+        [TestMethod]
+        public void Them_thieutennhanvien()
+        {
+            string actual = ThemNV.themNV("", "0392334527", "Huỳnh Đình Hai");
+            string expected = "0";
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }
