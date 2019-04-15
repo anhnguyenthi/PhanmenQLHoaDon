@@ -12,6 +12,7 @@ namespace InvoiceManager
 {
     public partial class InfomationControl : UserControl
     {
+        private int id;
         public InfomationControl()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace InvoiceManager
             DataTable data = DBManager.shared().ExecuteQuery(query);
             foreach (DataRow row in data.Rows)
             {
+                id = int.Parse(row["ID"].ToString());
                 imgGender.InitialImage = null;
                 txtFullName.Text = row["FULL_NAME"].ToString();
                 txtPhoneNumber.Text = row["PHONE_NUMBER"].ToString();
@@ -64,7 +66,7 @@ namespace InvoiceManager
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             bool gender = rbtnMale.Checked ? true : false;
-            string query = string.Format("UPDATE USERS SET FULL_NAME='{0}', gender='{1}', PHONE_NUMBER='{2}', ADDRESS='{3}'", txtFullName.Text, gender, txtPhoneNumber.Text, txtAddress.Text);
+            string query = string.Format("UPDATE USERS SET FULL_NAME='{0}', gender='{1}', PHONE_NUMBER='{2}', ADDRESS='{3}' WHERE ID='{4}'", txtFullName.Text, gender, txtPhoneNumber.Text, txtAddress.Text, id);
             if (DBManager.shared().ExecuteNonQuery(query) > 0)
             {
                 MessageBox.Show("Cập nhật thành công");

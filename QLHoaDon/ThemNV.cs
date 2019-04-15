@@ -18,9 +18,12 @@ namespace InvoiceManager
 
             else if (sdt.Length > 11)
             { return "Số điện thoại quá dài"; }
-            else if (dc == "")
-            { return " Không được để trống địa chỉ "; }
-                return "0";
+
+            //else if (ten = " " )
+            //{
+            //    return "Vui lòng điền đầy đủ thông tin";
+            //}
+            return "0";
             }
         
     }

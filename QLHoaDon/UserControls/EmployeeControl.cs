@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace InvoiceManager.UserControls
 {
@@ -19,35 +20,44 @@ namespace InvoiceManager.UserControls
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (DBManager.shared().ExecuteScalar(string.Format("SELECT * FROM USERS WHERE USERNAME='{0}'", txtUsername.Text)) == null )
+            if (isValidateError())
             {
-                string query = string.Format("INSERT INTO USERS(USERNAME, PASSWORD, FULL_NAME, GENDER, PHONE_NUMBER, ADDRESS, IS_ADMIN, IS_BLOCK) VALUES('{0}', '{1}', N'{2}', '{3}', '{4}', N'{5}', '{6}', '{7}')", txtUsername.Text, "123456", txtFullName.Text, rbtnMale.Checked, txtPhoneNumber.Text, txtAddress.Text, checkBoxAdmin.Checked, false);
-                if (DBManager.shared().ExecuteNonQuery(query) > 0)
-                {
-                    MessageBox.Show("Thêm mới thành công");
-                    emptyText();
-                    isEnable(false);
-                    txtUsername.Enabled = false;
-                } else
-                {
-                    MessageBox.Show("Thêm mới thất bại");
-                }
+
             } else
             {
-                string query = string.Format("UPDATE USERS SET FULL_NAME='{0}', GENDER='{1}', PHONE_NUMBER='{2}', ADDRESS='{3}', IS_ADMIN='{4}', IS_BLOCK='{5}' WHERE USERNAME='{6}'", txtFullName.Text, rbtnMale.Checked, txtPhoneNumber.Text, txtAddress.Text, checkBoxAdmin.Checked, false, txtUsername.Text);
-                if (DBManager.shared().ExecuteNonQuery(query) > 0)
+                if (DBManager.shared().ExecuteScalar(string.Format("SELECT * FROM USERS WHERE USERNAME='{0}'", txtUsername.Text)) == null)
                 {
-                    MessageBox.Show("Cập nhật thành công");
-                    emptyText();
-                    isEnable(false);
+                    string query = string.Format("INSERT INTO USERS(USERNAME, PASSWORD, FULL_NAME, GENDER, PHONE_NUMBER, ADDRESS, IS_ADMIN, IS_BLOCK) VALUES('{0}', '{1}', N'{2}', '{3}', '{4}', N'{5}', '{6}', '{7}')", txtUsername.Text, "123456", txtFullName.Text, rbtnMale.Checked, txtPhoneNumber.Text, txtAddress.Text, checkBoxAdmin.Checked, false);
+                    if (DBManager.shared().ExecuteNonQuery(query) > 0)
+                    {
+                        MessageBox.Show("Thêm mới thành công");
+                        emptyText();
+                        isEnable(false);
+                        txtUsername.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm mới thất bại");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật thất bại");
+                    string query = string.Format("UPDATE USERS SET FULL_NAME='{0}', GENDER='{1}', PHONE_NUMBER='{2}', ADDRESS='{3}', IS_ADMIN='{4}', IS_BLOCK='{5}' WHERE USERNAME='{6}'", txtFullName.Text, rbtnMale.Checked, txtPhoneNumber.Text, txtAddress.Text, checkBoxAdmin.Checked, false, txtUsername.Text);
+                    if (DBManager.shared().ExecuteNonQuery(query) > 0)
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                        emptyText();
+                        isEnable(false);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại");
+                    }
                 }
-            }
 
-            loadDataGird();
+                loadDataGird();
+            }
+            
         }
 
         private void EmployeeControl_Load(object sender, EventArgs e)
@@ -178,6 +188,27 @@ namespace InvoiceManager.UserControls
         private void btnUnlock_Click(object sender, EventArgs e)
         {
             setBlock(false);
+        }
+
+        private bool isValidateError()
+        {
+            if (txtUsername.Text.Length == 0 || txtFullName.Text.Length == 0 || txtPhoneNumber.Text.Length == 0 || txtAddress.Text.Length == 0)
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                return true;
+            }
+            if (!Regex.IsMatch(txtPhoneNumber.Text, "^[0-9]*$"))
+            {
+                MessageBox.Show("Số điện thoại chỉ bao gồm số");
+                return true;
+            }
+            if (txtPhoneNumber.Text.Length > 10)
+            {
+                MessageBox.Show("Số điện thoại tối đa 10 chữ số");
+                return true;
+            }
+            
+            return false;
         }
     }
 }

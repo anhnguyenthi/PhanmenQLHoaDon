@@ -25,11 +25,11 @@ namespace InvoiceManager.UserControls
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(txtPrice.Text, "[0-9]"))
+            if (txtName.Text.Length > 0)
             {
                 if (txtID.Text == "")
                 {
-                    string query = string.Format("INSERT INTO ITEMS(NAME, PRICE) VALUES(N'{0}', {1})", txtName.Text, txtPrice.Text);
+                    string query = string.Format("INSERT INTO ITEMS(NAME, PRICE) VALUES(N'{0}', '{1}')", txtName.Text, txtPrice.Text.Length == 0 ? 0 : float.Parse(txtPrice.Text));
                     if (DBManager.shared().ExecuteNonQuery(query) > 0)
                     {
                         MessageBox.Show("Bạn đã thêm mới thành công");
@@ -37,17 +37,18 @@ namespace InvoiceManager.UserControls
                 }
                 else
                 {
-                    string query = string.Format("UPDATE ITEMS SET NAME=N'{0}', PRICE={1} WHERE ID={2}", txtName.Text, txtPrice.Text, txtID.Text);
+                    string query = string.Format("UPDATE ITEMS SET NAME=N'{0}', PRICE='{1}' WHERE ID={2}", txtName.Text, txtPrice.Text.Length == 0 ? 0 : float.Parse(txtPrice.Text), txtID.Text);
                     if (DBManager.shared().ExecuteNonQuery(query) > 0)
                     {
                         MessageBox.Show("Cập nhật thành công");
+                        
                     }
                 }
-
+                panel1.Enabled = false;
                 loadDataGrid();
             } else
             {
-                MessageBox.Show("Sai định dạng (Giá chỉ là số)");
+                MessageBox.Show("Tên sản phẩm bắt buộc nhập");
             }
             
         }
@@ -86,6 +87,7 @@ namespace InvoiceManager.UserControls
         {
             txtName.Text = "";
             txtPrice.Text = "";
+            txtID.Text = "";
         }
 
         private void loadText()
@@ -122,6 +124,17 @@ namespace InvoiceManager.UserControls
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            emptyText();
+            panel1.Enabled = true;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            panel1.Enabled = true;
         }
     }
 }

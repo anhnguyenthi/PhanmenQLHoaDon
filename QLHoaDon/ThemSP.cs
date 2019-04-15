@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace InvoiceManager
 {
-   //public class ThemSP
-   // {
+    public class ThemSP
+    {
         
-
-
-   //     public static string themSP(string TenSP, float GiaSP)
-   //     {
-   //         if (TenSP.Length > 5)
-   //         {
-   //             return "Mã KH quá dài";
-   //         }
+        //public static string themSP(string TenSP, float GiaSP)
+        //{
+        //    if (TenSP.Length > 5)
+        //    {
+        //        return "Mã KH quá dài";
+        //    }
             
-   //         else if (GiaSP.ToString(GiaSP) > 1000000000000000)
-   //         { return "Giá quá cao"; }
 
-   //         return "0";
-   //     }
-   // }
+        //    else if (float.Parse > 1000000000000000)
+        //    { return "Giá quá cao"; }
+
+        //    return "0";
+        //}
+    }
 }
