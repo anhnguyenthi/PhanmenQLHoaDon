@@ -16,7 +16,7 @@ namespace InvoiceManager
                 return "Tên NV quá dài";
             }
 
-            else if (sdt.Length > 11)
+            else if (sdt.Length == 10)
             { return "Số điện thoại quá dài"; }
 
             else if (ten == "" )

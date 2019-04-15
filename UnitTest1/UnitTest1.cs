@@ -157,6 +157,13 @@ namespace UnitTest1
             string expected = "0";
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Them_thieu_DC_nhanvien()
+        {
+            string actual = ThemNV.themNV("Anh", "1234567891", "");
+            string expected = "0";
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
