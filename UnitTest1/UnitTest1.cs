@@ -5,23 +5,23 @@ using InvoiceManager;
 
 namespace UnitTest1
 {
-    
+
     //Chinh sua mot vai thong tin o day 
     [TestClass]
-    public class test_dangnhap:Login
+    public class test_dangnhap : Login
     {
         Login lg = new Login();
         [TestMethod]
         public void Nhapdungtaikhoan1()
         {////Pass nếu dăng nhap dc
             bool actual = lg.doLogin("admin", "123456");
-          
-            Assert.IsTrue( actual);
+
+            Assert.IsTrue(actual);
 
         }
 
         [TestMethod]
-        public void Nhapthieu_mavapw()     
+        public void Nhapthieu_mavapw()
         {
             //Pass nếu ko dăng nhap dc
             bool actual = lg.doLogin("", "");
@@ -112,8 +112,8 @@ namespace UnitTest1
     {
         [TestMethod]
         public void ktranv()
-       {
-            string expected = ktrnhanvien.ktra("admin", "Anh", "371 Nguyễn Kiệm","0123833999");
+        {
+            string expected = ktrnhanvien.ktra("admin", "Anh", "371 Nguyễn Kiệm", "0123833999");
             string actual = "0";
 
             Assert.AreEqual(expected, actual);
@@ -127,7 +127,7 @@ namespace UnitTest1
 
             Assert.AreEqual(expected, actual);
         }
-       
+
         [TestMethod]
         public void Themthanhcong()
         {
@@ -137,7 +137,7 @@ namespace UnitTest1
             //KhachHang kh1 = new KhachHang("PH2", "Phan", "Go Vap", "Nam", "08389283882");
             //string actual = kh.Inser
             //Assert.IsTrue(actual);
-            string actual = ThemNV.themNV("Anh","0392334527","Huỳnh Đình Hai");
+            string actual = ThemNV.themNV("Anh", "0392334527", "Huỳnh Đình Hai");
             string expected = "0";
             Assert.AreEqual(expected, actual);
         }
@@ -153,7 +153,7 @@ namespace UnitTest1
         [TestMethod]
         public void Them_thieu_SDT_nhanvien()
         {
-            string actual = ThemNV.themNV("Anh","", "Huỳnh Đình Hai");
+            string actual = ThemNV.themNV("Anh", "", "Huỳnh Đình Hai");
             string expected = "0";
             Assert.AreEqual(expected, actual);
         }
@@ -179,10 +179,22 @@ namespace UnitTest1
             string expected = "0";
             Assert.AreEqual(expected, actual);
         }
+    }
+    [TestClass]
+    public class SanPham
+    {
+        [TestMethod]
+        public void XoaSP_thanhcong()
+        {
+            string expected = XoaSP.checkXoa("vật tư");
+            string actual = "0";
 
+            Assert.AreEqual(expected, actual);
+        }
 
     }
-}
+
+    }
 
 
    

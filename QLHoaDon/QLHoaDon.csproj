@@ -64,7 +64,6 @@
     <Compile Include="Kiemtrathongtinnhanvien.cs" />
     <Compile Include="ktrnhanvien.cs" />
     <Compile Include="ThemNV.cs" />
-    <Compile Include="ThemSP.cs" />
     <Compile Include="UserControls\EmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +103,7 @@
     <Compile Include="UserControls\ProductControl.Designer.cs">
       <DependentUpon>ProductControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="XoaSP.cs" />
     <EmbeddedResource Include="Forms\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
