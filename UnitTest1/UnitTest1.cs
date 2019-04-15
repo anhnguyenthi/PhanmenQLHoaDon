@@ -14,7 +14,7 @@ namespace UnitTest1
         [TestMethod]
         public void Nhapdungtaikhoan1()
         {////Pass nếu dăng nhap dc
-            bool actual = lg.doLogin("admin", "123");
+            bool actual = lg.doLogin("admin", "123456");
           
             Assert.IsTrue( actual);
 
@@ -138,6 +138,32 @@ namespace UnitTest1
 
         //    Assert.AreEqual(expected, actual);
         //}
+        //public void Themthanhcong()
+        //{
+        //    string actual = kh("KH12", "Anh", "BC", "43543", "45335");
+        //    string expected = "0";
+        //    Assert.AreEqual(expected, actual);
+        //    KhachHang kh1 = new KhachHang("PH2", "Phan", "Go Vap", "Nam", "08389283882");
+        //    string actual = kh.Inser
+        //    Assert.IsTrue(actual);
+        //    string actual = ThemSP.themSP("Laptop", "1000000.00");
+        //    string expected = "0";
+        //    Assert.AreEqual(expected, actual);
+        //}
+        // Thêm nhân viên
+        [TestMethod]
+        public void Themthanhcong()
+        {
+            //string actual = kh ("KH12","Anh","BC","43543","45335");
+            //string expected = "0";
+            //Assert.AreEqual(expected, actual);
+            //KhachHang kh1 = new KhachHang("PH2", "Phan", "Go Vap", "Nam", "08389283882");
+            //string actual = kh.Inser
+            //Assert.IsTrue(actual);
+            string actual = ThemNV.themNV("Anh","0392334527","Huỳnh Đình Hai");
+            string expected = "0";
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
