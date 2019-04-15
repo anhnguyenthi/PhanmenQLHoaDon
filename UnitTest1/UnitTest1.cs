@@ -203,8 +203,13 @@ namespace UnitTest1
             string expected = "0";
             Assert.AreEqual(expected, actual);
         }
-
-
+        [TestMethod]
+        public void Tim_Rong()
+        {
+            string actual = TimSP.checkTim("");
+            string expected = "0";
+            Assert.AreEqual(expected, actual);
+        }
 
 
     }
